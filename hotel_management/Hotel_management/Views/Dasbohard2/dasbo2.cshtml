@@ -1,0 +1,70 @@
+﻿@model Hotel_management.Models.dasboard2
+@{
+    ViewBag.Title = "dasbo2";
+}
+
+<h2>dasbo2</h2>
+@using (Html.BeginForm())
+{
+    Hotel_management.Models.dasboard2 das=ViewBag.das;
+    <table>
+    
+    @for(int i=0;i<das.habitaciones.Count;i++)
+    {
+        <tr>
+            <td>
+            @das.habitaciones[i].hab;
+            </td>
+            <td>
+            @das.habitaciones[i].tipo;
+            </td>
+            @if (das.semanal == true)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    bool esteDia = true;
+                    <td>
+                        @if(das.habitaciones[i].desde.Count!=0)
+                        {
+                            for (int k = 0; k < das.habitaciones[i].desde.Count;k++ )
+                            {
+                                if(das.habitaciones[i].desde[k].DayOfYear <= das.fecha_inicio.AddDays(j).DayOfYear 
+                                    && das.fecha_inicio.AddDays(j).DayOfYear <= das.habitaciones[i].hasta[k].DayOfYear)
+                                {
+                                    esteDia = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    esteDia = false;
+                                }                                
+                            }
+                            if(esteDia==true)
+                            {
+                                <div style="width:100px;background-color:Blue;color:Black">
+                                        @das.fecha_inicio.AddDays(j).ToShortDateString()
+                                </div>
+                            }
+                            else
+                            {
+                                <div style="width:100px;background-color:Green;color:Black">
+                                        @das.fecha_inicio.AddDays(j).ToShortDateString()
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div style="width:100px;background-color:Green;color:Black">
+                                @das.fecha_inicio.AddDays(j).ToShortDateString()
+                            </div>
+                        }
+                    </td>
+                }
+            }
+            <td>
+            
+            </td>
+        </tr>
+    }
+    </table>
+}

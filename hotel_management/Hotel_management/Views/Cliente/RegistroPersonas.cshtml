@@ -1,0 +1,180 @@
+﻿+/@model Hotel_management.Models.Personitas
+
+@{
+    ViewBag.Title = "RegistroPersonas";
+  }      
+  
+   <script type="text/javascript">
+       $(document).ready(function () {
+           $('#cump').datepicker();
+
+           $(".editar").click(function (e) {
+                   e.preventDefault();
+                   $("#dialogo").attr("display", "block");
+
+                   $("#dialogo").dialog();
+               }));
+           });
+
+       });
+       
+       
+    </script>
+    
+
+
+
+        	<div class="contenti"></div>
+                         <div class= "five columns">
+                 <div class="sidebar">
+                     <li class="download"><a href="">CLIENTES</a>
+                          <ul>
+                               <li class="personas"><a href="http://localhost:3577/Cliente/RegistroPersonas">Personas</a></li>
+                               <li class="Empresas"><a href="http://localhost:3577/Cliente/RegistroEmpresas">Empresas</a></li>
+                               <li class="agencias"><a href="http://localhost:3577/Cliente/RegistroAgencias">Agencias</a></li>
+                          </ul>
+                     </li>
+           
+                     <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/junior-1.jpg"/>
+                          </div>
+
+                        </div>
+                     </li>
+
+                     <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/528599.jpg"/>
+                          </div>
+
+                        </div>
+                	
+		            </li>
+
+                    <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/lobbybar-3.jpg"/>
+                          </div>
+
+
+                        </div>			
+                    </li>
+
+                 
+                    </div>
+                 </div><!--nine columns-->
+
+
+
+
+
+   
+
+           
+           <div class= "nine columns">
+
+                     
+<h2 style=" color:#DC143C; margin:0 auto;  font-family: sans-serif;
+    font-size: 30px;">Registro</h2>
+
+
+<br />
+<br />
+<br />
+   <legend >
+        Registrar Personas
+   </legend>
+
+   <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:40%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    margin:0 auto;
+      
+        ">
+@using (Html.BeginForm())
+{
+        <tr style=" color:#8b0000;  " ><td><br />      <br /> <br />  es:</td><td ></td></tr>
+   <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Nombres:</td><td>@Html.TextBoxFor(b => b.nombr)</td>&nbsp</tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Apellido Paterno:</td><td> @Html.TextBoxFor(b => b.apel)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Apellido Materno:</td><td> @Html.TextBoxFor(b => b.apel_mat)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Pasaporte:</td><td>@Html.TextBoxFor(b => b.pas)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Teléfono:</td><td>@Html.TextBoxFor(b => b.tel)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Email:</td><td> @Html.TextBoxFor(b => b.email)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Direccion:</td><td>@Html.TextBoxFor(b => b.dir)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Ciudad:</td><td>@Html.TextBoxFor(b => b.ciu)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>País</td><td> @Html.TextBoxFor(b => b.pa)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Estado:</td><td>@Html.TextBoxFor(b => b.est)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Contacto:</td><td>@Html.TextBoxFor(b => b.cont)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Comentarios:</td><td> @Html.TextAreaFor(b => b.come)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Cumpleaños:</td><td>@Html.TextBoxFor(b => b.cump)</td></tr>  
+    <tr style=" color:#8b0000;  " ><td><br />      <br /> <br /></td><td ></td></tr>                     
+    <tr><td></td><td colspan ="2"> <input type="submit" value="Registrar"/></td></tr>   
+    
+}
+    </table> 
+    <br />
+<br />
+<br /> 
+   
+    </div>
+    <aside>
+    <div class= "sixteen columns">
+   
+    <br />
+<br /> 
+<br />
+<br /> 
+        <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:40%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    color:White;
+    margin:0 auto;
+      
+        " >
+        <tr style=" color:#8b0000;  " ><td><br />      <br /> <br />  es:</td><td ></td></tr>
+        <tr>  <td><b>Nombre</b></td><td><b>Telefono</b></td><td><b>Email</b></td><td><b>Direccion</b></td><td><b>Ciudad</b></td><td><b>Pais</b></td><td><b>Estado</b></td><td><b>Contacto</b></td></tr>
+ 
+       @foreach (var item in @ViewBag.cli)
+       {
+           string y = @item.id.ToString();
+                         <tr >
+             <td style=" color:#8b0000;"><br /><br /> <br />  es:</td>             
+             <td align="center" id="uno">@item.nombre</td><td ></td><td style=" color:#8b0000;">  es:</td>
+             <td align="center" id="dos">@item.telefono</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td align="center" id="dos">@item.email</td>  <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td align="center" id="dos">@item.direccion</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td align="center" id="dos">@item.ciudad</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td align="center" id="dos">@item.pais</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td align="center" id="dos">@item.estado</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td align="center" id="dos">@item.contacto</td>  <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td id="tres"> <!--Html.ActionLink("Editar", "../cliente/actualizarpersona", new { id = y })--> <a href="" class="editar">Editar</a></td>
+             <td id="tres"> @Html.ActionLink("Eliminar", "../cliente/eliminar", new { id = y })</td>
+          
+
+             </tr>
+         }
+        </table>
+      
+      <br /> 
+<br />
+<br /> 
+                             
+    </div>
+    
+
+    </aside>
+    <div id=dialogo >
+        <iframe></iframe>
+    </div>

@@ -1,0 +1,59 @@
+﻿@model Hotel_management.Models.ArchivoFile
+
+@{
+    ViewBag.Title = "upload";
+}
+
+<h2>upload</h2>
+<form action="../cliente/upload" method="post" enctype="multipart/form-data">
+  <input type="submit" name="archivo" id="archivo" />
+  <input type="file" name="archivo" value="subir" />
+</form>
+@if (ViewBag.lista != null)
+{ 
+    <table border="1px">
+    <tr>
+       <th>Nombre:</th>
+      <th>Telefono:</th>
+      <th>Email:</th>
+      <th>Direccion:</th>
+      <th>Ciudad:</th>
+      <th>Pais:</th>
+      <th>Estado:</th>
+      <th>Contacto:</th>
+      
+    </tr>
+    
+    
+  @foreach (var item in ViewBag.lista)
+  { 
+     <tr>
+       
+       <td>
+           @item.nombre
+       </td>
+       <td>
+           @item.telefono
+       </td>
+       <td>
+           @item.email
+       </td>
+       <td>
+           @item.direccion
+       </td>
+       <td>
+           @item.ciudad
+       </td>
+       <td>
+           @item.pais
+       </td>
+       <td>
+           @item.estado
+       </td>
+       <td>
+           @item.contacto
+       </td>
+     </tr>
+  }
+  </table>
+}

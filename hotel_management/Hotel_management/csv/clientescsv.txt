@@ -1,0 +1,4 @@
+id,Nombre,Telefono,Email,Direccion,Ciudad,Pais,Estado,Contacto
+2,Ditmar,76162897,marce@hotmail.com,mejillones 332,Potosi,Bolivia,Potosi,4562318
+3,Juan,72368978,Valle@gmail.com,calaca 15,sucre,Bolivia,Potosi,45212563
+4,lucho,73897846,Ramos@gmail.com,oruro 20,salta,Argentina,Salta,6542211

@@ -1,0 +1,125 @@
+﻿@model Hotel_management.Models.Agencitas
+
+@{
+    ViewBag.Title = "RegistroAgencias";
+    }
+  
+             <script type="text/javascript">
+                 $(document).ready(function () {
+                     $('#cump').datepicker();
+
+
+                 });
+    </script>
+    
+
+
+
+        	<div class="contenti"></div>
+
+
+
+
+
+
+   
+
+           
+           <div class= "fifteen columns">
+
+                     
+<h2 style=" color:#DC143C; margin:0 auto;  font-family: sans-serif;
+    font-size: 30px;">Registro</h2>
+<br />
+<br />
+<br />
+   <legend >
+        Registrar Agencias
+   </legend>
+
+   <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:40%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    margin:0 auto;
+      
+        ">
+@using (Html.BeginForm())
+{
+       <tr style=" color:#8b0000;  " ><td><br />      <br /> <br />  es:</td><td ></td></tr>
+
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Nombre:</td><td>@Html.TextBoxFor(b => b.nombr)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Nit de Agencia:</td><td>@Html.TextBoxFor(b => b.nit)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Teléfono:</td><td>@Html.TextBoxFor(b => b.tel)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Email:</td><td> @Html.TextBoxFor(b => b.email)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Direccion:</td><td>@Html.TextBoxFor(b => b.dir)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Ciudad:</td><td>@Html.TextBoxFor(b => b.ciu)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>País</td><td> @Html.TextBoxFor(b => b.pa)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Estado:</td><td>@Html.TextBoxFor(b => b.est)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Contacto:</td><td>@Html.TextBoxFor(b => b.cont)</td></tr>      
+    <tr><td></td><td></td><td colspan ="2"> <input type="submit" value="Registrar"/></td></tr>                                                       
+}
+</table>
+
+    <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>
+<div class= "two columns">
+</div>
+<div class= "sixteen columns">
+    
+    <br />
+<br /> 
+<br />
+<br /> 
+        <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:40%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    color:White;
+    margin:0 auto;
+      
+        ">
+        <tr style=" color:#8b0000;  " ><td><br />      <br /> <br />  es:</td><td ></td></tr>
+       @foreach (var item in @ViewBag.usu2)
+         {
+             string y = @item.id.ToString(); 
+             <tr >
+             
+             <td style=" color:#8b0000;"><br /><br /> <br />  es:</td>
+             <td>@item.nombre</td><td ></td><td style=" color:#8b0000;">  es:</td>
+             <td >@item.telefono</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td>@item.email</td>  <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td>@item.direccion</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td>@item.ciudad</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td>@item.pais</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td>@item.estado</td> <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <td>@item.contacto</td>  <td style=" color:#8b0000;"><br />      <br /> <br />  es:</td>
+             <th> <td id="tres"> @Html.ActionLink("Editar", "../cliente/actualizaragencia", new { id = y })</td></th>
+           <th><td id="tres"> @Html.ActionLink("Eliminar", "../cliente/eliminarage", new { id = y })</td></th>
+             </tr>
+         }
+        </table>
+      
+      <br /> 
+<br />
+<br /> 
+                             
+    </div>
+   
+    
+
+
+

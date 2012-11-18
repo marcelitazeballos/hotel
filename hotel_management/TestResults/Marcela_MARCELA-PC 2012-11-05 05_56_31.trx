@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="58434c09-f418-4bca-9940-7ce815140730" name="Marcela@MARCELA-PC 2012-11-05 05:56:31" runUser="Marcela-PC\Marcela" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="134eec2e-57c6-451a-a89a-983cfd0d6fa1">
+    <Deployment runDeploymentRoot="Marcela_MARCELA-PC 2012-11-05 05_56_31">
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\Hotel_management\bin\Hotel_management.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.WebApi.Core.4.0.20505.0\lib\net40\System.Web.Http.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.Mvc.4.0.20505.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20505.0\lib\net40\System.Web.Http.WebHost.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.WebApi.Client.4.0.20505.0\lib\net40\System.Net.Http.Formatting.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.Razor.2.0.20505.0\lib\net40\System.Web.Razor.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.Net.Http.2.0.20505.0\lib\net40\System.Net.Http.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.Helpers.dll" />
+      <DeploymentItem filename="C:\Users\Marcela\Documents\Visual Studio 2010\Projects\Hotel_management\packages\Microsoft.AspNet.WebPages.2.0.20505.0\lib\net40\System.Web.WebPages.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-11-05T05:56:31.1739304-04:00" queuing="2012-11-05T05:56:34.1160987-04:00" start="2012-11-05T05:56:34.2741078-04:00" finish="2012-11-05T05:56:35.8381972-04:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\users\marcela\documents\visual studio 2010\projects\hotel_management\hotel_management.tests\bin\debug\hotel_management.tests.dll" id="226dc264-71af-6c2e-564b-090883f3875f">
+      <Execution id="d931b54f-07e6-4ef9-9e3e-bbddee398d35" />
+      <TestMethod codeBase="C:/Users/Marcela/Documents/Visual Studio 2010/Projects/Hotel_management/Hotel_management.Tests/bin/Debug/Hotel_management.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hotel_management.Tests.Controllers.HomeControllerTest, Hotel_management.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="Contact" storage="c:\users\marcela\documents\visual studio 2010\projects\hotel_management\hotel_management.tests\bin\debug\hotel_management.tests.dll" id="0f369117-714e-42ff-9120-411a04abcb16">
+      <Execution id="52408c5c-146a-46d4-87bd-87ae43f49a1e" />
+      <TestMethod codeBase="C:/Users/Marcela/Documents/Visual Studio 2010/Projects/Hotel_management/Hotel_management.Tests/bin/Debug/Hotel_management.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hotel_management.Tests.Controllers.HomeControllerTest, Hotel_management.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Contact" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\marcela\documents\visual studio 2010\projects\hotel_management\hotel_management.tests\bin\debug\hotel_management.tests.dll" id="6df8d405-90d1-096e-9873-9291754b8c01">
+      <Execution id="04ae592a-50ef-4ae2-8a55-e18f2cac4a77" />
+      <TestMethod codeBase="C:/Users/Marcela/Documents/Visual Studio 2010/Projects/Hotel_management/Hotel_management.Tests/bin/Debug/Hotel_management.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hotel_management.Tests.Controllers.HomeControllerTest, Hotel_management.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0f369117-714e-42ff-9120-411a04abcb16" executionId="52408c5c-146a-46d4-87bd-87ae43f49a1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="226dc264-71af-6c2e-564b-090883f3875f" executionId="d931b54f-07e6-4ef9-9e3e-bbddee398d35" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6df8d405-90d1-096e-9873-9291754b8c01" executionId="04ae592a-50ef-4ae2-8a55-e18f2cac4a77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="52408c5c-146a-46d4-87bd-87ae43f49a1e" testId="0f369117-714e-42ff-9120-411a04abcb16" testName="Contact" computerName="MARCELA-PC" duration="00:00:00.1245866" startTime="2012-11-05T05:56:34.4831197-04:00" endTime="2012-11-05T05:56:35.6671874-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52408c5c-146a-46d4-87bd-87ae43f49a1e">
+    </UnitTestResult>
+    <UnitTestResult executionId="d931b54f-07e6-4ef9-9e3e-bbddee398d35" testId="226dc264-71af-6c2e-564b-090883f3875f" testName="Index" computerName="MARCELA-PC" duration="00:00:00.0341346" startTime="2012-11-05T05:56:35.6721877-04:00" endTime="2012-11-05T05:56:35.7171903-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d931b54f-07e6-4ef9-9e3e-bbddee398d35">
+    </UnitTestResult>
+    <UnitTestResult executionId="04ae592a-50ef-4ae2-8a55-e18f2cac4a77" testId="6df8d405-90d1-096e-9873-9291754b8c01" testName="About" computerName="MARCELA-PC" duration="00:00:00.0037611" startTime="2012-11-05T05:56:35.7201905-04:00" endTime="2012-11-05T05:56:35.7301911-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04ae592a-50ef-4ae2-8a55-e18f2cac4a77">
+    </UnitTestResult>
+  </Results>
+</TestRun>

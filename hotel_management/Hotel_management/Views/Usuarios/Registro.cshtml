@@ -1,0 +1,121 @@
+﻿  
+
+
+
+@model Hotel_management.Models.Perfil
+
+@{
+    ViewBag.Title = "Registro";
+    }
+       <div class= "nine columns">
+                 <div class="sidebar">
+           
+                     <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/junior-1.jpg"/>
+                          </div>
+
+                          <div class="five columns" onclick="animar()">
+                            <p onclick="animar();" >  El Gran Hotel tiene un total de 30 habitaciones. Todas las habitaciones ofrecen espectaculares.
+                                Todas las habitaciones disponen de cuarto de baño, WiFi gratuito, minibar,
+                                 caja fuerte, pantalla de TV de plasma de 37”.</p>
+                                                             
+                           
+                             
+                   
+                          </div>
+                        </div>
+                     </li>
+
+                     <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/528599.jpg"/>
+                          </div>
+
+                          <div class="five columns">
+                            <p>Salga a comer, cenar o tomar una copa al Gran Hotel.
+                             Puede disfrutar de una relajante bebida en el Lobby Lounge,
+                              experimentar un delicioso y reconfortante brunch dominical en L´Orangerie,
+                               disfrutar de una amena charla junto a la piscina en el Miramar Bar.</p>
+                    
+                          </div>
+                        </div>
+                	
+		            </li>
+
+                    <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/lobbybar-3.jpg"/>
+                          </div>
+
+                          <div class="five columns">
+                            <p>El hotel ofrece la posibilidad de celebrar reuniones y eventos privados en
+                             un marco inigualable, en salas con luz natural, terrazas con jardín y vitas a la
+                              ciudad de Barcelona con capacidad de hasta 140 personas. Todas las salas están equipadas con
+                               la última tecnología audiovisual y WiFi gratuito.</p>
+                          </div>
+                        </div>			
+                    </li>
+                    <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/reuniones-1.jpg"/>
+                          </div>
+
+                          <div class="five columns">
+                            <p>Ofrecemos opciones tentadoras de refinada gastronomía.
+                             Cada una de las tres propuestas del Gran Hotel está diseñada para captar
+                              la atención de los sentidos mediante una cocina exquisita 
+                              y unos escenarios deslumbrantes.</p>
+                          </div>
+                        </div>	
+			        </li>
+                 
+                    </div>
+                 </div><!--nine columns-->
+
+<h2 style=" color:#FFE4C4; background:#DC143C; margin:0 auto;  font-family: sans-serif;
+    font-size: 30px;">Registro</h2>
+
+<fieldset style=" background:#DC143C;">
+<br />
+<br />
+<br />
+   <legend >
+        Registrar Personas
+   </legend>
+
+   <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:30%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    margin:0 auto;
+      
+        ">
+@using (Html.BeginForm())
+{
+    <tr style=" color:#8b0000;  " ><td><br />      <br /> <br />  es:</td><td ></td></tr>    
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Nombres:</td><td>@Html.TextBoxFor(b => b.nom)</td></tr> 
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Apellido Paterno</td><td> @Html.TextBoxFor(b => b.apa)</td></tr>
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Apellido Materno:</td><td>@Html.TextBoxFor(b => b.ama)</td></tr>  
+    <tr style=" color:#8b0000;  " ><td><br />      <br /> <br />  es:</td><td ></td></tr> 
+    <tr><td></td><td></td><td colspan ="2"> <input type="submit" value="Enviar"/></td></tr>                                                       
+}
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</fieldset>
+    

@@ -1,0 +1,54 @@
+﻿@model Hotel_management.Models.FacturacionInput
+@{
+    ViewBag.Title = "Facturacion";
+}
+
+<h2>Facturacion</h2>
+@using (Html.BeginForm())
+{
+    if (this.IsPost&&ViewBag.doit)
+    {
+        Hotel_management.Models.reserva []res=ViewBag.reservas as Hotel_management.Models.reserva [];
+        Hotel_management.Models.servicios_cliente []ser=ViewBag.reservas as Hotel_management.Models.servicios_cliente [];
+        double total=0;double total2=0;
+        for (int i = 0; i < res.Length;i++ )
+        {
+            total+=res[i].habitacion.tipo.precio.Value;
+            <li>
+            @res[i].habitacion.tipo.precio;
+            <br />
+            @res[i].fecha_inicio.Value.AddDays(i).ToLongDateString()
+            </li>
+        }
+        <br>
+        @total.ToString();
+        <br />
+        
+        if (ser != null)
+        {
+            for (int i = 0; i < ser.Length; i++)
+            {
+                total2 += ser[i].servicio.precio.Value;
+            <li>
+            @ser[i].servicio.descripcion
+            </li>
+            }
+            <br/>
+        
+            total2.ToString();
+        }
+        double aux=(total + total2);
+    }
+    else
+    {
+        <div>
+            @Html.LabelFor(m => m.nombre)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.nombre)
+        </div>
+        <div>
+            <input type=submit id=submit value=Enviar/>            
+        </div>
+    }
+}

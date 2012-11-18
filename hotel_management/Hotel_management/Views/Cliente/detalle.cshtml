@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "detalle";
+}
+
+<script src="~/Scripts/jquery-ui-1.8.11.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $.post("/Cliente/loadData", {},
+            function (data) {
+                alert("fdsfds");
+                $("#buscar").autocomplete({ source: data.nombres });
+            }, "json");
+
+    });
+</script>
+    
+    
+
+
+
+        	<div class="contenti"></div>
+                         <div class= "five columns">
+                 <div class="sidebar" >
+                     
+                          <ul>
+
+                               <li class="personas" ><a href="http://localhost:3577/Cliente/RegistroPersonas" style="color:White; background:black;">Personas</a>
+                                    <ul>
+                                    <li class="exportar" ><a href="http://localhost:3577/Cliente/exportarCsv" style="color:White; background:black;">Exportar</a>
+                                    <li class="exportar" ><a href="http://localhost:3577/Cliente/upload" style="color:White; background:black;">Importar</a>
+                                    </ul>
+                               </li>
+                               <li class="Empresas" ><a href="http://localhost:3577/Cliente/RegistroEmpresas" style="color:White; background:black;">Empresas</a></li>
+                               <li class="agencias"><a href="http://localhost:3577/Cliente/RegistroAgencias" style="color:White; background:black;">Agencias</a></li>
+                          </ul>
+                    
+           
+                     <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/junior-1.jpg"/>
+                          </div>
+
+                        </div>
+                     </li>
+
+                     <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/528599.jpg"/>
+                          </div>
+
+                        </div>
+                	
+		            </li>
+
+                    <li>
+                        <div>
+                          <div class="three columns">
+                              <img src="/images/servicios/lobbybar-3.jpg"/>
+                          </div>
+
+
+                        </div>			
+                    </li>
+
+                 
+                    </div>
+                 </div><!--nine columns-->
+
+
+           
+           <div class= "seventeen columns">
+           <h5 style="color:Red; font-family:Cursive; font-size:xx-large;">Personas</h5>
+           <br />
+           <br />
+           <br />
+                                       <p style="font-family:Cursive; font-size:xx-large;">Crea o edita personas asociadas a tu hotel. </p>
+                                        <p style="font-family:Cursive; font-size:xx-large;">Tener esta informacion ordenada hara que tu reserva sea mas 
+                                       facil.</p>
+                                       <br />
+           <br />
+                                       <p style="font-family:Cursive; font-size:xx-large;">Tambien puedes importar o exportar tu lista de clientes en formato CVS</p>
+                <br />
+<br />
+           </div>
+      
+           <br />
+              <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:40%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    margin:0 auto;
+      
+        ">
+            @using(Html.BeginForm())
+            {
+                @Html.TextBox("buscar");
+            }
+       <tr style=" color:#8b0000;  " ><td><br />      <br /> <br />  es:</td><td ></td></tr>
+
+    <tr style=" color:#E6E6FA; border:15px;   margin:0 auto;" ><td></td><td>Nombre:</td><td></td></tr> 
+      
+    <tr><td></td><td></td><td colspan ="2"> <input type="submit" value="o puede crear uno"/></td></tr>                                                       
+
+</table>
+
+                     
+
+
+
+  
+
+
+
+

@@ -1,0 +1,79 @@
+﻿@model Hotel_management.Models.Empresitas
+
+@{
+    ViewBag.Title = "eliminarempresa";
+}
+
+<section class="cuerpo">
+ 
+   <center><h2>ELIMINAR EMPRESA</h2></center>
+   <div class= "sixteen columns">
+<style></style>
+<h2 style=" color:#DC143C; margin:0 auto;  font-family: sans-serif;
+    font-size: 30px;">Eliminar</h2>
+<!--<fieldset style=" background:#DC143C;">-->
+<br />
+<br />
+<br />
+   
+
+   <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:100%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    margin:0 auto;
+      
+        ">
+
+    @if (ViewBag.flag == 0)
+    {
+        
+        using (Html.BeginForm())
+        {
+              <input type="submit" value="BUSCAR" />
+             
+          <tr><td>Nombre:</td><td>@Html.TextBoxFor(a => a.nombr)</td>&nbsp;&nbsp;<td>Nit:</td><td>@Html.TextBoxFor(a => a.nit)</td></tr>
+          <tr><td>Telefono:</td><td>@Html.TextBoxFor(a => a.tel)</td>&nbsp;&nbsp;<td>Empresa:</td><td>@Html.TextBoxFor(a => a.metodo)</td></tr>
+          <tr><td>Direccion:</td><td>@Html.TextBoxFor(a => a.dir)</td>&nbsp;&nbsp;<td>Email:</td><td>@Html.TextBoxFor(a => a.email)</td>></tr>
+          <tr><td>Pais:</td><td>@Html.TextBoxFor(a => a.pa)</td><td>Ciudad:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.ciu)</td></tr>
+          <tr><td>Contacto:</td><td>@Html.TextBoxFor(a => a.cont)</td><td>Estado:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.est)</td></tr>
+                     
+        }
+    }
+    else
+    {
+        using (Html.BeginForm("eliminaremp", "Cliente"))
+        {
+          
+          <tr><td>Nombre:</td><td>@Html.TextBoxFor(a => a.nombr)</td>&nbsp;&nbsp;<td>Nit:</td><td>@Html.TextBoxFor(a => a.nit, new { Value = @ViewBag.nit })</td></tr>
+          <tr><td>Telefono:</td><td>@Html.TextBoxFor(a => a.tel, new { Value = @ViewBag.telefono })</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.metodo, new { Value = @ViewBag.metodo_pago })</td></tr>
+          <tr><td>Direccion:</td><td>@Html.TextBoxFor(a => a.dir, new { Value = @ViewBag.direccion })</td>&nbsp;&nbsp;<td>Email:</td><td>@Html.TextBoxFor(a => a.email, new { Value = @ViewBag.email })</td>></tr>
+          <tr><td>Pais:</td><td>@Html.TextBoxFor(a => a.pa, new { Value = @ViewBag.pais })</td><td>Ciudad:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.ciu, new { Value = @ViewBag.ciudad })</td></tr>
+          <tr><td>Contacto:</td><td>@Html.TextBoxFor(a => a.cont, new { Value = @ViewBag.contacto })</td><td>Estado:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.est, new { Value = @ViewBag.estado })</td></tr>
+          <tr><td colspan ="4" scope="row"> <center> <input type="submit" value="Eliminar" ></center></td></tr> 
+           @Html.HiddenFor(a => a.id, new { Value = @ViewBag.id }) 
+        }
+    }
+      </table>
+  
+  
+    </div>
+   </section>  
+    
+<aside>
+<div class="boton">
+        <div>
+          <h5>EMPRESA</h5>
+                <lu>
+                <li><a href="../Cliente/RegistroEmpresas">Registrar</a></li>
+                <li><a href="../cliente/actualizarempresa">Editar</a></li>
+                <li><a href="../cliente/eliminarempresa">Eliminar</a></li>
+             </lu>
+             
+        </div>
+        </div>
+
+        </aside>

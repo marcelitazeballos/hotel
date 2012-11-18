@@ -1,0 +1,51 @@
+﻿@model Hotel_management.Models.Agencitas
+
+@{
+    ViewBag.Title = "actualizaragencia";
+}
+
+<section class="cuerpo">
+ 
+   <center><h2>ACTUALIZAR AGENCIA</h2></center>
+   
+   <div> 
+   <fieldset class="f1">
+    <legend>Actualizar</legend>
+    
+
+     <table>
+    @if (ViewBag.flag == 0)
+    {
+        
+        using (Html.BeginForm())
+        {
+              <input type="submit" value="BUSCAR" />
+             
+          <tr><td>Nombre:</td><td>@Html.TextBoxFor(a => a.nombr)</td>&nbsp;&nbsp;<td>Nit:</td><td>@Html.TextBoxFor(a => a.nit)</td></tr>
+          <tr><td>Telefono:</td><td>@Html.TextBoxFor(a => a.tel)</td>&nbsp;&nbsp;</tr>
+          <tr><td>Direccion:</td><td>@Html.TextBoxFor(a => a.dir)</td>&nbsp;&nbsp;<td>Email:</td><td>@Html.TextBoxFor(a => a.email)</td>></tr>
+          <tr><td>Pais:</td><td>@Html.TextBoxFor(a => a.pa)</td><td>Ciudad:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.ciu)</td></tr>
+          <tr><td>Contacto:</td><td>@Html.TextBoxFor(a => a.cont)</td><td>Estado:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.est)</td></tr>
+                     
+        }
+    }
+    else
+    {
+        using (Html.BeginForm("actualizarage", "Cliente"))
+        {
+          
+          <tr><td>Nombre:</td><td id="♠">@Html.TextBoxFor(a => a.nombr, new { Value=@ViewBag.nombre})</td>&nbsp;&nbsp;<td>Nit:</td><td>@Html.TextBoxFor(a => a.nit, new { Value = @ViewBag.nit })</td></tr>
+          <tr><td>Telefono:</td><td>@Html.TextBoxFor(a => a.tel, new { Value = @ViewBag.telefono })</td>&nbsp;&nbsp;</tr>
+          <tr><td>Direccion:</td><td>@Html.TextBoxFor(a => a.dir, new { Value = @ViewBag.direccion })</td>&nbsp;&nbsp;<td>Email:</td><td>@Html.TextBoxFor(a => a.email, new { Value = @ViewBag.email })</td>></tr>
+          <tr><td>Pais:</td><td>@Html.TextBoxFor(a => a.pa, new { Value = @ViewBag.pais })</td><td>Ciudad:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.ciu, new { Value = @ViewBag.ciudad })</td></tr>
+          <tr><td>Contacto:</td><td>@Html.TextBoxFor(a => a.cont, new { Value = @ViewBag.contacto })</td><td>Estado:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.est, new { Value = @ViewBag.estado })</td></tr>
+          <tr><td colspan ="4" scope="row"> <center> <input type="submit" value="Actualizar" ></center></td></tr> 
+           @Html.HiddenFor(a => a.id, new { Value = @ViewBag.id }) 
+        }
+    }
+      </table>
+  
+    </fieldset>
+    </div>
+   </section>  
+    

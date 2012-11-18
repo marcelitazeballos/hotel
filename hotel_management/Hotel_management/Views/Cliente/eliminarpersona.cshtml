@@ -1,0 +1,88 @@
+﻿@model Hotel_management.Models.Personitas
+
+@{
+    ViewBag.Title = "eliminarpersona";
+}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function onload() { }
+
+    function slide() {
+        $('#sidebar').slideUp(1000);
+    }
+    function desplegar() {
+        $('#form').slideDown(1000);
+    }
+    function animar() {
+        $('#sidebar li div div').animate({ width: '300px', height: '150px' }, 1500);
+
+    }
+</script>
+
+<section class="cuerpo">
+ 
+   <center><h2>ELIMINAR PERSONA</h2></center>
+   
+   <div class= "nine columns">
+
+                     
+<h2 style=" color:#DC143C; margin:0 auto;  font-family: sans-serif;
+    font-size: 30px;">ELIMINAR</h2>
+
+
+<br />
+<br />
+<br />
+   <legend >
+      eliminar
+   </legend>
+
+   <table style=" ;
+    border-radius: 80px 20px;   
+    background-color: #8b0000;
+    box-shadow:20px 15px 20px #B5C1C5, 0 0 0 10px #EEF5F7 inset; 
+    width:100%; 
+    -webkit-box-shadow: 10px 15px 46px rgba(0,0,0,0.8); 
+    -moz-box-shadow: 0px 5px 6px ; 
+    margin:0 auto;
+      
+        ">
+
+    @if (ViewBag.flag == 0)
+    {
+        
+        using (Html.BeginForm())
+        {
+              <input type="submit" value="BUSCAR" />
+             
+          <tr><td>Nombre:</td><td>@Html.TextBoxFor(a => a.nombr)</td>&nbsp;&nbsp;<td>Apellido paterno:</td><td>@Html.TextBoxFor(a => a.apel)</td></tr>
+          <tr><td>Apellido materno</td><td>@Html.TextBoxFor(a=>a.apel_mat)</td></tr> 
+          <tr><td>Telefono:</td><td>@Html.TextBoxFor(a => a.tel)</td>&nbsp;&nbsp;<td>Pasaporte:</td><td>@Html.TextBoxFor(a => a.pas)</td></tr>
+          <tr><td>Direccion:</td><td>@Html.TextBoxFor(a => a.dir)</td>&nbsp;&nbsp;<td>Email:</td><td>@Html.TextBoxFor(a => a.email)</td>></tr>
+          <tr><td>Pais:</td><td>@Html.TextBoxFor(a => a.pa)</td><td>Ciudad:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.ciu)</td></tr>
+          <tr><td>Contacto:</td><td>@Html.TextBoxFor(a => a.cont)</td><td>Estado:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.est)</td></tr>
+          <tr><td>Cumpleaños:</td><td>@Html.TextBoxFor(a => a.cump)</td>&nbsp;&nbsp;<td>Comentario:</td><td>@Html.TextAreaFor(a => a.come)</td></tr>
+           
+        }
+    }
+    else
+    {
+        using (Html.BeginForm("eliminar", "Cliente"))
+        {
+          <input onclick="slide();"  type="button" value="ELIMINAR" />    <tr><td>Nombre:</td><td>@Html.TextBoxFor(a => a.nombr)</td>&nbsp;&nbsp;<td>Apellido:</td><td>@Html.TextBoxFor(a => a.apel, new { Value = @ViewBag.apellido_pat })</td></tr>
+          <tr><td>Apellido Materno:</td><td>@Html.TextBoxFor(a => a.apel_mat, new { Value = @ViewBag.apellido_mat })</td></tr> 
+          <tr><td>Telefono:</td><td>@Html.TextBoxFor(a => a.tel, new { Value = @ViewBag.telefono })</td>&nbsp;&nbsp;<td>Pasaporte:</td><td>@Html.TextBoxFor(a => a.pas, new { Value = @ViewBag.pasaporte })</td></tr>
+          <tr><td>Direccion:</td><td>@Html.TextBoxFor(a => a.dir, new { Value = @ViewBag.direccion })</td>&nbsp;&nbsp;<td>Email:</td><td>@Html.TextBoxFor(a => a.email, new { Value = @ViewBag.email })</td>></tr>
+          <tr><td>Pais:</td><td>@Html.TextBoxFor(a => a.pa, new { Value = @ViewBag.pais })</td><td>Ciudad:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.ciu, new { Value = @ViewBag.ciudad })</td></tr>
+          <tr><td>Contacto:</td><td>@Html.TextBoxFor(a => a.cont, new { Value = @ViewBag.contacto })</td><td>Estado:</td>&nbsp;&nbsp;<td>@Html.TextBoxFor(a => a.est, new { Value = @ViewBag.estado })</td></tr>
+          <tr><td>Cumpleaños:</td><td>@Html.TextBoxFor(a => a.cump, new { Value = @ViewBag.cumpleaños })</td>&nbsp;&nbsp;<td>Comentario:</td><td>@Html.TextAreaFor(a => a.come, new { Value = @ViewBag.comentario })</td></tr>
+          <tr id="form"><td colspan ="4" scope="row"> <center> <input onclick="slide();"  type="submit" value="ELIMINAR" ></center></td></tr> 
+           @Html.HiddenFor(a => a.id, new { Value = @ViewBag.id }) 
+        }
+    }
+      </table>
+  
+    </fieldset>
+    </div>
+   </section>  
+    

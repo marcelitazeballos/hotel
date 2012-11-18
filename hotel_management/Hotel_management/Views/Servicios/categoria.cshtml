@@ -1,0 +1,27 @@
+﻿@model Hotel_management.Models.Servicitos
+
+@{
+    ViewBag.Title = "categoria";
+}
+
+<h2>categoria</h2>
+<style>
+  #mensaje
+  {
+      width:300px;
+      border:3px solid #ff0000;
+      border-radius:10px;
+      margin:auto;
+      
+      }
+</style>
+<h2>categoria</h2>
+<div class="mensaje">
+    @ViewBag.mensaje
+</div>
+@using (@Html.BeginForm())
+{ 
+    @Html.TextBoxFor(a => a.nombre, new { @Style="width:200px;"})
+    <input  type="submit" value="enviar" />
+    
+}

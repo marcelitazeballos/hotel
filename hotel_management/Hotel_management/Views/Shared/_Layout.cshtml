@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="utf-8" />
+        <title>hotel</title>
+        
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/themes/base/css", "~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesshet">
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+        <script src=" ~/Scripts/jquery-ui-1.8.11.js"></script>
+
+        <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	
+
+
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="/stylesheets/base.css">
+	<link rel="stylesheet" href="/stylesheets/skeleton.css">
+	<link rel="stylesheet" href="/stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="/images/favicon.ico">
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <!-- movimiento banner
+    ======================================================= -->
+
+
+
+    <link href="css/layout.css" rel ="stylesheet" />
+
+    <SCRIPT src=" ~/Scripts/ESFERAS.JS" type=text/javascript></SCRIPT>
+   
+    <script>
+        $(document).ready(function () {
+            var zoom = 100;
+            $(".sidebar li div div img").each(function () {
+                $(this).load(function () {
+                    var difx = ($(this).width() - 150) / 2;
+                    var dify = ($(this).height() - 150) / 2;
+                    $(this).css("margin-left", -difx);
+                    $(this).css("margin-top", -dify);
+
+                    $(this).attr("origw", $(this).width());
+                    $(this).attr("origh", $(this).height());
+                    $(this).attr("mw", difx);
+                    $(this).attr("mh", dify);
+                });
+                $(this).hover(
+              function () {
+
+                  var w = Number($(this).attr("origw")) + zoom;
+                  var mw = zoom / 2;
+                  var mh = 20;
+                  $(this).dequeue();
+                  $(this).animate({ "width": w, "margin-left": "+=-" + mw, "margin-top": "+=-" + mh }, 400);
+              },
+              function () {
+                  var mw = Number($(this).attr("mw"));
+                  var mh = Number($(this).attr("mh"));
+                  var w = Number($(this).attr("origw"));
+                  $(this).dequeue();
+                  $(this).animate({ "width": w, "margin-left": -mw, "margin-top": -mh }, 400);
+              });
+            });
+        });
+
+
+    </script>
+
+
+    
+    </head>
+    <body>
+
+
+    
+    <div class="container">
+        <div class="header">
+            <div class="content">
+                <div class="content-wrapper">
+                    <section id="login" >@Html.Partial("_LoginPartial")</section>
+                </div>
+                    <div class="three columns" >
+					    <img src="/images/FA.png" class="logo"/>
+				    </div>
+				    <div class="eleven columns">
+					    <nav class="mainmenu">
+					        <ul>
+                           
+						        <li class="home"><a href="http://localhost:3577/">EL HOTEL</li>
+                                     
+						        <li class="trabajos"><a href="http://localhost:3577/Usuarios/registro">USUARIOS</li>
+                                <li class="trabajos"><a href="http://localhost:3577/Dasbohard2/dasbo">dashboard2</li>
+                                <li class="download"><a href="http://localhost:3577/Habitacion/RegistroHabitacion">HABITACIONES</li>
+                                <li class="download"><a href="http://localhost:3577/Cliente/detalle">CLIENTES</a>
+                                <!-- <li class="download"><a href="http://localhost:3577/Mantenimiento/RegistroMantenimiento">MANTENIMIENTO</li>
+                                    
+                                    
+                                <li class="download"><a href="http://localhost:3577/Cliente/detalle">CLIENTES</a>
+                                   <!--  <ul>
+                                            <li class="personas"><a href="http://localhost:3577/Cliente/RegistroPersonas">Personas</a></li>
+                                            <li class="Empresas"><a href="http://localhost:3577/Cliente/RegistroEmpresas">Empresas</a></li>
+                                            <li class="agencias"><a href="http://localhost:3577/Cliente/RegistroAgencias">Agencias</a></li>
+                                      </ul>
+                                </li>
+                            
+                                <li class="download"><a href="http://localhost:3577/Tipo/RegistroT">TIPO</li>-->
+                                 
+                                <li class="contacto"><a href="http://localhost:3577/Servicios/RegistroServicio">SERVICIOS</a></li>
+                                
+                                <li class="download"><a href="http://localhost:3577/Reserva/RegistroReserva">RESERVAS</a></li>
+                       
+                                     
+                                <li class="contacto"><a href="http://localhost:3577/Administrar/getUserRoles">ADMINISTRADOR DE ROLES</a></li>
+                                
+						        </ul>
+					        </nav>
+                     </div>
+                     
+				
+            </div><!--content-->
+
+      </div>
+           
+        <div id="body">
+            @RenderSection("featured", required: false)
+            @RenderBody()
+
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Proyecto de Seminario</p>
+                </div>
+                <div class="float-right">
+                    <ul id="social">
+                        <li><a href="http://facebook.com" class="facebook">Facebook</a></li>
+                        <li><a href="http://twitter.com" class="twitter">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+
+        	<!-- Primary Page Layout
+	================================================== -->
+	<!-- Delete everything in this .container and get started on your own site! -->
+	</div><!-- container -->
+<!-- End Document
+================================================== -->
+
+    </body>
+</html>
+
+
+
+
+
+

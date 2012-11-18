@@ -1,0 +1,330 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+*{
+	
+	margin:0px;
+	padding:0px;
+	
+}
+.container
+{
+   
+    width:100%;
+   
+   border: 10px solid #8b0000;
+    
+}
+.header
+{
+    
+     background-image:url("/images/fo.jpg");
+	width:100%;
+	height:200px;
+	float:left;
+	
+}
+.content
+{
+    
+    /*border:10px solid #00ff00;*/
+	max-width:2000px;	
+	position:relative;
+	margin:0px auto;
+	padding:0px;
+	
+}
+nav.mainmenu
+{
+	/*border: 10px solid #FF4500;*/
+	width:1200px;
+	margin-left:50px;
+	margin-top:2px;
+	 
+	
+}
+.logo
+{
+    /*border: 10px solid #OOBFFF;*/
+       	margin-top:10px;
+       	width:150px;
+       	margin-left:30px;	
+       	
+}
+.content-wrapper
+{
+    /*border: 10px solid #FF4500;*/
+    width:190px;   
+    margin-left:1150px;
+}
+nav.mainmenu ul
+{
+	padding:0px;
+	margin:0 auto;
+}
+nav.mainmenu ul li
+{
+	width:120px;
+	display:inline-block;
+	vertical-align:top;
+	height:105PX;
+	border-radius:10px 20px;
+	box-shadow:	0px 0px 10px 0.1px #FFF8DC;
+	-webkit-box-shadow: 0px 0px 30px #ffffff; 
+	margin:0 auto;
+ 	margin:0px;
+	padding:0px;
+
+	
+}
+
+nav.mainmenu ul li a
+{
+	color:#F0FFFF;
+	margin-top:27px;
+	margin-bottom:25px;
+	display:block;
+	font-size: 12px;
+	text-align:center;
+	text-decoration:none;
+	
+}
+nav.mainmenu li a:hover
+{
+    background-color:#808080;
+    
+}
+nav.mainmenu> li 
+{
+    float:left;
+    
+}
+nav.mainmenu li ul
+{
+    display:none;
+    position:fixed;
+    min-width:1800px;
+    
+}
+nav.mainmenu li:hover> ul
+{
+    display:block;
+}
+
+.contenti
+{
+    
+/* border: 10px solid #00ff00;*/
+     background-image:url("../images/imaho.gif");
+	width:100%;
+	float:left;
+	
+}
+.sidebar
+{
+    /*border: 10px solid #00ff00;*/
+    width:100%;
+    background:#8b0000;
+    height:1024px;
+    /*
+	position:inherit;
+	margin:0px;
+	padding:0px;
+	*/
+    
+}
+.sidebar li div div p
+{
+        background:#8b0000;
+    text-align:center;
+    margin-top:10px;
+    font-size:15px;
+    text-decoration:none;
+    color:White;
+}
+.bannercontainer
+{
+     /*border:10px solid #00ff00;*/
+     width:100%;
+  
+     
+	/*height:400px;
+	overflow:hidden;*/
+   
+}
+
+
+div.sidebar li div div
+{
+    /*border:10px solid #FF1493;*/
+    width:100%;
+    height:200px;
+    overflow:hidden;
+    
+}
+div.sidebar li div div img
+{
+    width:200px;
+    
+    
+}
+div.bannercontainer li div img
+
+{
+    margin-top:40px;
+    border:10px solid #FF1493;
+    
+    
+}
+
+div.bannercontainer li p
+{
+   
+    text-align:center;
+    margin-top:10px;
+    font-size:15px;
+    text-decoration:inherit;
+    
+}
+.two columns li div img:hover
+{}
+
+
+/*div.bannercontainer li
+{
+    float:left;
+    list-style:none;
+
+    margin-top:0.01px;
+    margin-left:0.01px;
+}
+*/
+.logo
+{
+    /* border:10px solid #FF1493;*/
+     	margin:0px;
+	    padding:0px;
+    border: 10px solid #00ff00;
+    
+    }
+
+@media only screen and  (max-width: 400px) {
+	.bannercontainer
+	{
+		height:100px;
+	}
+	.bannercontainer img{
+		width:300px;
+	}
+	nav.mainmenu
+	{
+		margin-left:30px;
+	}
+	nav.mainmenu ul li
+	{
+		width:50px;
+		display:inline-block;
+		vertical-align:top;
+		height:60px;
+		margin:0px;
+		border-radius:10px 40px;
+		box-shadow:0px 0px 10px 0.1px #000;
+	}
+	nav.mainmenu ul li a
+	{
+		color:#AAAAAA;
+		margin-top:40px;
+		display:block;
+		font-size: 8px;
+		text-align:center;
+		text-decoration:none;
+	}
+	nav.mainmenu ul .home
+	{
+		background:url("../images/black/home.png") no-repeat;
+	}
+	nav.mainmenu ul .download
+	{
+		background:url("../images/black/download.png") no-repeat;
+	}
+	nav.mainmenu ul .trabajos
+	{
+		background:url("../images/black/trabajos.png") no-repeat;
+	}
+	nav.mainmenu ul .contacto
+	{
+		background:url("../images/black/contacto.png") no-repeat;
+	}
+	nav.mainmenu ul .home:hover
+	{
+		background:url("../images/white/home.png") no-repeat;
+	}
+	nav.mainmenu ul .download:hover
+	{
+		background:url("../images/white/download.png") no-repeat;
+	}
+	nav.mainmenu ul .trabajos:hover
+	{
+		background:url("../images/white/trabajos.png") no-repeat;
+	}
+	nav.mainmenu ul .contacto:hover
+	{
+		background:url("../images/white/contacto.png") no-repeat;
+	}
+	
